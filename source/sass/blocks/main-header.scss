@@ -1,0 +1,28 @@
+.main-header {
+  padding-top: 11px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 53px;
+  }
+}
+
+.main-header--index {
+  @media (min-width: $desktop-width) {
+    margin-bottom: 80px;
+    min-height: 696px;
+    background-image:
+      url("../img/index-background-desktop.jpg"),
+      linear-gradient(to right, $white 50%, #63a63c 50%);
+    background-repeat: no-repeat;
+    background-position: right bottom, left top;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-background-desktop@2x.jpg"), linear-gradient(to right, $white 50%, #63a63c 50%);
+      background-size: 720px auto, 100% 100%;
+    }
+  }
+}

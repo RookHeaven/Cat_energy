@@ -1,0 +1,23 @@
+.program-list {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.program-list__item {
+  background-color: $light-grey;
+  padding: 10px 20px 20px;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 55px 311px 55px 53px;
+    margin-bottom: 31px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 47%;
+    padding: 75px 50px 58px 53px;
+  }
+}

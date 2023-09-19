@@ -1,0 +1,96 @@
+.site-list {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  font-family: $font-extra;
+  text-align: center;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.site-list__item {
+  padding-top: 22px;
+  padding-bottom: 23px;
+
+  @media (max-width: $mobile-only) {
+    border-top: 1px solid $light-grey-7;
+
+    &:last-child {
+      border-bottom: 1px solid $light-grey-7;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 0;
+    margin-left: 36px;
+    padding-top: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 35px;
+  }
+}
+
+.site-list__link {
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $black-1;
+  padding-bottom: 6px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--active::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    left: 0;
+    right: 0;
+    bottom: 4px;
+    width: 100%;
+    background: $green;
+  }
+
+  &--active:hover,
+  &--active:active {
+    opacity: 1;
+    cursor: auto;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 17px;
+    padding-bottom: 11px;
+  }
+
+  @media (min-width: $desktop-width) {
+    color: $black-2;
+
+    &--index {
+      color: $white;
+
+      &::after {
+        @media (min-width: $desktop-width) {
+          background: $white;
+        }
+      }
+    }
+  }
+}

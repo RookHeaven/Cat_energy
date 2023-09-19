@@ -1,0 +1,127 @@
+.main-nav {
+  position: relative;
+
+  @media (max-width: $mobile-only) {
+    border-bottom: 1px solid $light-grey-6;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 768px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    margin: 0 auto;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+}
+
+.main-nav__logo img {
+  padding-bottom: 12px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 174px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 203px;
+  }
+}
+
+.main-nav__wrapper {
+  position: relative;
+
+  @media (max-width: $mobile-only) {
+    width: 320px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 12px;
+  right: 22px;
+  width: 24px;
+  height: 18px;
+  border: 0;
+  background-color: $white;
+  background-image: url("../img/mobile-menu-icon.svg");
+  background-repeat: no-repeat;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+
+  @media (max-width: $mobile-only) {
+    display: none;
+    position: absolute;
+    top: 54px;
+    background: $white;
+    z-index: 10;
+    left: 0;
+    right: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 480px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 520px;
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
+  width: 19px;
+  height: 19px;
+  background-image: url("../img/close-icon.svg");
+  background-repeat: no-repeat;
+}
+
+.main-nav--opened .main-nav__list {
+  @media (max-width: $mobile-only) {
+    display: block;
+  }
+}
+
+.main-nav--closed .main-nav__list {
+  @media (max-width: $mobile-only) {
+    display: none;
+  }
+}
+
+.main-nav--nojs .main-nav__list {
+  @media (max-width: $mobile-only) {
+    display: block;
+    position: static;
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
+  @media (max-width: $mobile-only) {
+    display: none;
+  }
+}

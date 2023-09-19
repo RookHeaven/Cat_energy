@@ -1,0 +1,157 @@
+.description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: $font-main;
+  color: $dark-grey;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 15px;
+    margin-bottom: 21px;
+    border-bottom: 1px solid $light-grey-7;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    border: 0;
+  }
+}
+
+.description__title {
+  margin: 0 0 38px;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  font-family: $font-extra;
+  color: $black-1;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 47px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 26px;
+  }
+}
+
+.description__text {
+  margin: 0;
+  margin-top: 2px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 14px;
+  }
+}
+
+.description__list {
+  counter-reset: myCounter;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-start;
+  }
+}
+
+.description__item {
+  position: relative;
+  padding-left: 80px;
+  min-height: 70px;
+
+  @media (max-width: $mobile-width) {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: $green;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    @media (min-width: $tablet-width) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 25px 0 0;
+    padding: 100px 62px 0 0;
+    width: 46%;
+    min-height: 290px;
+
+    &::after {
+      position: absolute;
+      top: -40px;
+      left: 117px;
+      z-index: -1;
+
+      counter-increment: myCounter;
+      content: counter(myCounter);
+      color: $light-grey;
+      display: inline-block;
+      font-family: $font-extra;
+      font-size: 281px;
+      line-height: 281px;
+      text-align: right;
+    }
+
+    &:nth-child(n+10) {
+      &::after {
+        left: 87px;
+        letter-spacing: -35px;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
+    padding-top: 98px;
+    width: 20.1%;
+    min-height: 280px;
+
+    &:not(:nth-child(4n)) {
+      margin-right: 79px;
+    }
+  }
+}
+
+.description__item--leaf::before {
+  background-image: url("../img/advantage-leaf.svg");
+  background-size: 30px auto;
+}
+
+.description__item--powder::before {
+  background-image: url("../img/advantage-tub.svg");
+  background-size: 30px auto;
+}
+
+.description__item--meal::before {
+  background-image: url("../img/advantage-eat.svg");
+  background-size: 26px auto;
+}
+
+.description__item--scales::before {
+  background-image: url("../img/advantage-clock.svg");
+  background-size: 30px auto;
+}

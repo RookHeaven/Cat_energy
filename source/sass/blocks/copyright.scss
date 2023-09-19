@@ -1,0 +1,45 @@
+.copyright__text {
+  max-width: 115px;
+  line-height: 18px;
+  color: $dark-grey;
+  text-decoration: none;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 18px;
+  }
+}
+
+.copyright__link {
+  display: block;
+  color: $dark-grey-2;
+
+  &:hover {
+    border-color: $green;
+    color: $green;
+  }
+
+  &:active {
+    border-color: $green;
+    color: $green;
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 22px;
+    margin-bottom: 14px;
+  }
+}
+
+.copyright__link-icon {
+  path {
+    fill: currentColor;
+  }
+}
